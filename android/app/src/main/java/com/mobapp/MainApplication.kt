@@ -1,4 +1,4 @@
-package com.mobapp
+package com.CRapp
 
 import android.app.Application
 import com.facebook.react.PackageList

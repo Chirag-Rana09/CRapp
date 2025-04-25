@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "mobApp.app"
-               BlueprintName = "mobApp"
-               ReferencedContainer = "container:mobApp.xcodeproj">
+               BuildableName = "CRapp.app"
+               BlueprintName = "CRapp"
+               ReferencedContainer = "container:CRapp.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "mobAppTests.xctest"
-               BlueprintName = "mobAppTests"
-               ReferencedContainer = "container:mobApp.xcodeproj">
+               BuildableName = "CRappTests.xctest"
+               BlueprintName = "CRappTests"
+               ReferencedContainer = "container:CRapp.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "mobApp.app"
-            BlueprintName = "mobApp"
-            ReferencedContainer = "container:mobApp.xcodeproj">
+            BuildableName = "CRapp.app"
+            BlueprintName = "CRapp"
+            ReferencedContainer = "container:CRapp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "mobApp.app"
-            BlueprintName = "mobApp"
-            ReferencedContainer = "container:mobApp.xcodeproj">
+            BuildableName = "CRapp.app"
+            BlueprintName = "CRapp"
+            ReferencedContainer = "container:CRapp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

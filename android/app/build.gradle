@@ -81,9 +81,9 @@ android {
     ndkVersion rootProject.ext.ndkVersion
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
-    namespace "com.mobapp"
+    namespace "com.CRapp"
     defaultConfig {
-        applicationId "com.mobapp"
+        applicationId "com.CRapp"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

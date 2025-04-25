@@ -27,7 +27,6 @@ const tabIcons = {
 };
 
 const AnimatedTabButton = ({children, accessibilityState, onPress, route}) => {
-  console.log('route ￠===== ⚛️ )', route);
   const focused = accessibilityState.selected;
   const {t} = useTranslation();
   const {colors} = useTheme();
@@ -103,13 +102,12 @@ const BottomTabs = ({type = 'animated'}) => {
           height: 100,
           backgroundColor: colors?.primaryLight,
           borderRadius: 30,
-          margin: 10,
         },
         tabBarButton: props => <AnimatedTabButton {...props} route={route} />,
         tabBarIcon: ({color, size}) => (
           <Ionicons name={tabIcons[route.name]} size={30} color={color} />
         ),
-        tabBarActiveTintColor: colors?.white,
+        tabBarActiveTintColor: colors?.red,
         // tabBarInactiveTintColor: 'gray',
       })}>
       <Tab.Screen name="Home" component={Home} />

@@ -18,6 +18,7 @@ import {t} from 'i18next';
 
 const Setting = () => {
   const {colors} = useTheme();
+  console.log('colors ￠===== ⚛️ )', colors);
   const navigation = useNavigation();
   const dispatch = useDispatch();
   const styles = createStyles(colors);

@@ -6,6 +6,7 @@ import {useTranslation} from 'react-i18next';
 import CButton from '../../components/CButton';
 import {useNavigation, useTheme} from '@react-navigation/native';
 import CStatusBar from '../../components/CStatusBar';
+import RNExitApp from 'react-native-exit-app';
 
 export default function Home() {
   const {colors} = useTheme();
@@ -25,7 +26,8 @@ export default function Home() {
       <CButton
         title="Let's Go!"
         onPress={() => {
-          navigation.navigate('ChangeLanguage');
+          // navigation.navigate('ChangeLanguage');
+          RNExitApp.exitApp();
         }}
       />
     </View>

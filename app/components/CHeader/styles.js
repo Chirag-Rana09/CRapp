@@ -18,7 +18,7 @@ const Style = colors =>
     title: {
       fontSize: 25,
       fontWeight: 'bold',
-      color: '#000',
+      color: colors?.textColor,
     },
   });
 

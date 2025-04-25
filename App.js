@@ -40,10 +40,9 @@ function App() {
   };
 
   // const isDarkMode =
-  //   theme == 'systemDefault' ? systemTheme == 'dark' : darkMode;
-  // const appTheme = isDarkMode ? darkTheme : lightTheme;
-  const appTheme = lightTheme;
-  console.log('appTheme ￠===== ⚛️ )', appTheme);
+  // theme == 'systemDefault' ? systemTheme == 'dark' : darkMode;
+  const appTheme = systemTheme == 'dark' ? darkTheme : lightTheme;
+  // const appTheme = lightTheme;
 
   // const isDarkMode = useColorScheme() === 'dark';
   // this function for initialize store and handle the loader

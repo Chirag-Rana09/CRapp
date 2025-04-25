@@ -12,7 +12,7 @@ const Style = colors =>
     sectionTitle: {
       fontSize: 14,
       fontWeight: '500',
-      color: '#999',
+      color: colors?.textColor,
       marginTop: 20,
       marginBottom: 10,
     },
@@ -26,7 +26,7 @@ const Style = colors =>
     },
     itemText: {
       fontSize: 16,
-      color: colors.text,
+      color: colors.textColor,
     },
     destructive: {
       color: 'red',

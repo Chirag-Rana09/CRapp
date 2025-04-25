@@ -19,7 +19,11 @@ const CHeader = ({
     <View style={styles.container}>
       {showBack ? (
         <TouchableOpacity onPress={onBackPress} style={styles.iconBox}>
-          <Icon name="arrow-back-outline" size={24} color={iconColor} />
+          <Icon
+            name="arrow-back-outline"
+            size={24}
+            color={colors?.textColor || iconColor}
+          />
         </TouchableOpacity>
       ) : (
         <View style={styles.iconBox} />
@@ -29,7 +33,11 @@ const CHeader = ({
 
       {rightIconName ? (
         <TouchableOpacity onPress={onRightPress} style={styles.iconBox}>
-          <Icon name={rightIconName} size={rightIconSize} color={iconColor} />
+          <Icon
+            name={rightIconName}
+            size={rightIconSize}
+            color={colors?.textColor || iconColor}
+          />
         </TouchableOpacity>
       ) : (
         <View style={styles.iconBox} />

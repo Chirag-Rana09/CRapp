@@ -7,6 +7,8 @@ import {BaseToast} from 'react-native-toast-message';
 
 const commonColors = {
   red: '#E94235',
+  white: '#ffffff',
+  black: '#00000',
   errorColor: '#FF4949',
   green: '#34A853',
   orange: '#FF981F',
@@ -29,11 +31,10 @@ export const lightColors = {
   black2: '#222222',
   border: '#E0E0E0',
   lightRed: '#FFEDED',
-
   borderColor: '#E0E0E0',
   inputLabel: '#111125',
   inputBackGround: '#F5F5F5',
-  textColor: '#212121',
+  textColor: '#212121', // Primary text color in light theme
   thirdFontBlack: '#6F6F6F',
   lightWhite: '#FAFAFA',
   white: '#FFFFFF',
@@ -59,13 +60,12 @@ export const darkColors = {
   accent: '#032CFF',
   borderColor: '#616161',
   inputLabel: '#E0E0E0',
-  mainFontBlack: '#FFFFFF',
+  mainFontBlack: '#FFFFFF', // Primary text color in dark theme
   secondFontBlack: '#E0E0E0',
   inputBackGround: '#424242',
-  textColor: '#FFFFFF',
+  textColor: '#FFFFFF', // Text color for dark mode
   thirdFontBlack: '#E0E0E0',
   lightWhite: '#424242',
-
   white: '#212121',
   grey: '#424242',
   border: '#E0E0E0',
@@ -138,19 +138,19 @@ export const GetTypography = () => {
     screenHeaderText: {
       fontSize: FontSize.F28,
       fontFamily: FontFamily.bold,
-      color: themeColors.textColor,
+      color: themeColors.textColor, // Will dynamically change based on theme
       lineHeight: 51,
     },
     screenDescriptionText: {
       fontSize: FontSize.F16,
       fontFamily: FontFamily.regular,
-      color: themeColors.thirdFontBlack,
+      color: themeColors.thirdFontBlack, // Will dynamically change based on theme
       lineHeight: 28,
     },
     iconTitle: {
       fontFamily: FontFamily.medium,
       fontSize: FontSize.F14,
-      color: themeColors.mainFontBlack,
+      color: themeColors.mainFontBlack, // Will dynamically change based on theme
     },
     formLabel: {
       color: themeColors.inputLabel,
@@ -162,7 +162,7 @@ export const GetTypography = () => {
       fontSize: FontSize.F16,
     },
     CInputText: {
-      color: themeColors.mainFontBlack,
+      color: themeColors.mainFontBlack, // Will dynamically change based on theme
       fontSize: FontSize.F16,
       fontFamily: FontFamily.semiBold,
     },
@@ -173,7 +173,7 @@ export const GetTypography = () => {
     semiTitle: {
       fontSize: FontSize.F20,
       fontFamily: FontFamily.bold,
-      color: themeColors.mainFontBlack,
+      color: themeColors.mainFontBlack, // Will dynamically change based on theme
     },
     viewAll: {
       fontSize: FontSize.F16,
@@ -199,11 +199,8 @@ export const ToastConfig = () => {
   const isDarkMode =
     theme == 'systemDefault' ? colorScheme == 'dark' : darkmode;
   const themeColors = isDarkMode ? darkColors : lightColors;
+
   return {
-    /*
-          Overwrite 'success' type,
-          by modifying the existing `BaseToast` component
-        */
     success: props => (
       <BaseToast
         {...props}
@@ -229,10 +226,6 @@ export const ToastConfig = () => {
         }}
       />
     ),
-    /*
-      Overwrite 'inf' type,
-      by modifying the existing `BaseToast` component
-    */
     info: props => (
       <BaseToast
         {...props}
@@ -258,10 +251,6 @@ export const ToastConfig = () => {
         }}
       />
     ),
-    /*
-      Overwrite 'error' type,
-      by modifying the existing `BaseToast` component
-    */
     error: props => (
       <BaseToast
         {...props}
@@ -287,10 +276,6 @@ export const ToastConfig = () => {
         text2NumberOfLines={2}
       />
     ),
-    /*
-      Create new type 'white',
-      by modifying the existing `BaseToast` component
-    */
     white: props => (
       <BaseToast
         {...props}
@@ -319,11 +304,4 @@ export const ToastConfig = () => {
       />
     ),
   };
-  /*
-    Or create a completely new type - `tomatoToast`,
-    building the layout from scratch.
-
-    I can consume any custom `props` I want.
-    They will be passed when calling the `show` method (see below)
-  */
 };

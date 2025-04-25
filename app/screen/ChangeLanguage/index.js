@@ -6,6 +6,7 @@ import styles from './style';
 import CHeader from '../../components/CHeader';
 import {useNavigation} from '@react-navigation/native';
 import {t} from 'i18next';
+import RNExitApp from 'react-native-exit-app';
 
 const ChangeLanguage = () => {
   const dispatch = useDispatch();
@@ -37,7 +38,12 @@ const ChangeLanguage = () => {
         {languages.map(lang => (
           <TouchableOpacity
             key={lang.code}
-            onPress={() => handleSelect(lang.code)}
+            onPress={() => {
+              handleSelect(lang.code);
+              setTimeout(() => {
+                RNExitApp.exitApp();
+              }, 2000);
+            }}
             style={styles.option}>
             <View style={styles.radioCircle}>
               {selectedLang === lang.code && (

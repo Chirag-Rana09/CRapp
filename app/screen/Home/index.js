@@ -6,7 +6,7 @@ import {useTranslation} from 'react-i18next';
 import CButton from '../../components/CButton';
 import {useNavigation, useTheme} from '@react-navigation/native';
 import CStatusBar from '../../components/CStatusBar';
-import RNExitApp from 'react-native-exit-app';
+import AnimatedView from '../../components/AnimatedView';
 
 export default function Home() {
   const {colors} = useTheme();
@@ -17,19 +17,20 @@ export default function Home() {
   const {t} = useTranslation();
 
   return (
-    <View style={getStyle.root}>
-      <CStatusBar />
-      <Text style={{fontFamily: FontFamily.bold}}>Home Screen</Text>
-      <Text style={{fontSize: 24}}>
-        {t('welcome')} {user?.name}
-      </Text>
-      <CButton
-        title="Let's Go!"
-        onPress={() => {
-          // navigation.navigate('ChangeLanguage');
-          RNExitApp.exitApp();
-        }}
-      />
-    </View>
+    <AnimatedView>
+      <View style={getStyle.root}>
+        <CStatusBar />
+        <Text style={{fontFamily: FontFamily.bold}}>Home Screen</Text>
+        <Text style={{fontSize: 24}}>
+          {t('welcome')} {user?.name}
+        </Text>
+        <CButton
+          title="Let's Go!"
+          onPress={() => {
+            // navigation.navigate('ChangeLanguage');
+          }}
+        />
+      </View>
+    </AnimatedView>
   );
 }

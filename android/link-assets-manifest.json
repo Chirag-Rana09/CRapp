@@ -1,0 +1,13 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "app/assets/fonts/Saira-Bold.ttf",
+      "sha1": "f775ae425170fea53a7a60c2eb94eaec20861499"
+    },
+    {
+      "path": "app/assets/fonts/Saira_Condensed-ExtraLightItalic.ttf",
+      "sha1": "0b4885ec68f4077704016906263eae15475f4c96"
+    }
+  ]
+}
